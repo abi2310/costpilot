@@ -1,0 +1,150 @@
+Id,Bereich,Bezeichnung,Bezugsquelle,Preis,Breite Laserzuschnitt in mm 1,Breite Laserzuschnitt in mm 2,Bauteilgewicht in kg,Materialsärke in mm,Material,Anzahl der Abkantungen,Gesamtlänge aller Aussparungen in mm
+1,A,Anschlag,Eigenfertigungsteil,3.58,194.3,80.0,0.74,6.0,S355MC,4,109.9
+2,A,Rippe,Eigenfertigungsteil,1.17,129.1,72.3,0.269,8.0,S355MC,0,3.14
+3,A,Mantel,Kaufteil,14.0,177.1,784.0,5.2,5.0,Hardox 400,1,0.0
+4,A,Verschleissblech,Kaufteil,11.08,80.0,770.0,2.391,5.0,Hardox 400,0,250.0
+5,A,Verstärkung,Eigenfertigungsteil,3.32,243.2,191.5,1.059,5.0,S355MC,2,100.0
+6,A,Verstärkung,Eigenfertigungsteil,9.02,350.1,336.0,2.97,5.0,S355MC,4,436.56
+7,A,Steg li,Eigenfertigungsteil,5.81,408.5,53.0,1.188,12.0,S355MC,2,31.4
+8,A,Steg re,Eigenfertigungsteil,5.81,408.5,53.0,1.188,12.0,S355MC,2,31.4
+9,A,Buegel,Eigenfertigungsteil,1.85,122.0,82.0,0.38,8.0,S355MC,2,85.722
+10,A,Steg re,Eigenfertigungsteil,5.23,283.4,52.8,1.05,12.0,S355MC,2,25.12
+11,A,Auflageplatte,Eigenfertigungsteil,1.41,20.0,50.0,0.062,10.0,S355MC,0,25.748
+12,A,Verstärkung,Eigenfertigungsteil,3.32,243.2,191.5,1.059,5.0,S355MC,2,100.0
+13,A,Lasche,Eigenfertigungsteil,1.12,137.5,120.0,0.427,5.0,S355MC,0,38.151
+14,A,Steg,Kaufteil,3.69,50.0,770.0,2.421,8.0,S235JR,0,0.0
+15,A,Verstärkung,Eigenfertigungsteil,9.21,180.6,771.0,5.507,5.0,S355MC,1,0.0
+16,A,Winkelblech,Eigenfertigungsteil,11.18,646.5,428.4,5.179,3.0,S355MC,2,211.2
+17,A,Platte,Eigenfertigungsteil,4.81,103.0,207.9,0.78,8.0,S700MC,0,181.856
+18,A,C Profil,Eigenfertigungsteil,17.02,1072.3,218.9,6.937,4.0,S355MC,6,378.98
+19,A,Winkel,Eigenfertigungsteil,3.42,134.0,140.8,1.149,8.0,S355MC,1,51.496
+20,A,Blech ,Eigenfertigungsteil,7.66,186.0,352.7,3.038,8.0,S355MC,2,253.2
+21,A,Knotenblech,Eigenfertigungsteil,3.76,185.5,92.7,1.014,15.0,S355MC,1,0.0
+22,A,Verstärkung,Eigenfertigungsteil,6.03,320.8,179.6,1.387,5.0,S700MC,2,361.1
+23,A,Bodenblech,Eigenfertigungsteil,16.58,351.6,496.2,5.34,8.0,S355MC,3,319.194
+24,A,Lochblech,Eigenfertigungsteil,3.68,236.0,94.0,1.0,10.0,S355MC,0,220.6
+25,A,Seitenblech,Eigenfertigungsteil,7.03,304.9,332.1,2.989,6.0,S355MC,0,334.41
+26,A,Abweiser,Eigenfertigungsteil,0.57,50.0,7.0,0.035,15.0,S355MC,0,0.0
+27,A,Verschleissblech,Kaufteil,5.25,760.0,60.8,1.8,5.0,HARDOX400,1,0.0
+28,A,Träger,Eigenfertigungsteil,28.0,952.0,258.3,9.935,6.0,S700MC,1,684.056
+29,A,Winkel,Eigenfertigungsteil,5.27,729.0,148.1,2.47,3.0,S355MC,1,125.6
+30,A,Knotenblech re,Eigenfertigungsteil,1.87,135.2,104.0,0.288,4.0,S355MC,2,0.0
+31,A,Buegel,Eigenfertigungsteil,2.74,135.0,138.8,1.036,8.0,S355MC,0,0.0
+32,A,Winkel li,Eigenfertigungsteil,3.17,127.0,170.1,0.767,8.0,S355MC,1,225.79
+33,A,Winkel re,Eigenfertigungsteil,3.17,127.0,170.1,0.767,8.0,S355MC,1,225.79
+34,A,Profil,Eigenfertigungsteil,2.59,110.0,167.3,0.281,4.0,S355MC,2,131.88
+35,A,Lasche,Eigenfertigungsteil,0.42,43.0,53.4,0.06,5.0,S355MC,0,39.25
+36,A,Lasche,Eigenfertigungsteil,1.02,81.6,77.6,0.139,8.0,S355MC,0,69.0
+37,A,Platte li,Kaufteil,24.91,272.8,450.2,7.515,20.0,S355MC,0,693.312
+38,A,Platte re,Kaufteil,21.79,248.9,428.4,7.298,20.0,S355MC,0,580.586
+39,A,Einweisblech,Eigenfertigungsteil,0.97,79.6,49.0,0.207,12.0,S355MC,0,0.0
+40,A,Lasche li,Eigenfertigungsteil,1.15,40.0,49.1,0.054,6.0,S355MC,1,48.82
+41,A,Lasche re,Eigenfertigungsteil,1.15,40.0,49.1,0.054,6.0,S355MC,1,48.82
+42,A,Winkel re,Eigenfertigungsteil,1.13,49.0,70.1,0.074,5.0,S355MC,1,0.0
+43,A,Knoten,Eigenfertigungsteil,0.72,107.6,65.5,0.165,6.0,S355MC,0,0.0
+44,A,Knotenblech li,Eigenfertigungsteil,1.87,105.0,135.2,0.288,4.0,S355MC,2,0.0
+45,A,Verstärkung ,Kaufteil,3.65,160.9,84.1,1.29,12.0,S700MC,0,142.4
+46,A,Seitenwand li,Kaufteil,105.76,679.9,866.1,16.978,8.0,S355MC,1,2908.58
+47,A,Z Profil,Eigenfertigungsteil,4.35,253.3,118.0,1.256,5.0,S355MC,2,178.98
+48,A,Zwischenblech,Eigenfertigungsteil,34.5,952.0,278.9,11.694,6.0,S700MC,4,62.8
+49,A,Winkel,Eigenfertigungsteil,5.93,728.0,105.3,2.195,4.0,S355MC,2,1501.2
+50,A,Platte,Kaufteil,3.22,161.3,71.4,0.581,8.0,S355MC,0,123.0
+51,B,Strebe mi,Eigenfertigungsteil,3.19,354.7,129.0,0.86,3.0,S355MC,2,687.54
+52,B,Deckel re un,Eigenfertigungsteil,2.92,173.9,122.5,0.427,4.0,S700MC,1,381.23
+53,B,Winkelblech mi,Eigenfertigungsteil,6.34,383.4,352.5,1.702,3.0,S700MC,4,39.878
+54,B,Ausgleichsscheibe,Eigenfertigungsteil,0.74,128.5,61.4,0.171,3.0,S700MC,0,0.0
+55,B,Füllplatte re,Eigenfertigungsteil,3.35,254.3,242.2,0.948,4.0,S355MC,1,639.66
+56,B,Steg vo re,Eigenfertigungsteil,4.91,297.1,234.4,1.523,6.0,S355MC,2,139.416
+57,B,Strebe re in,Eigenfertigungsteil,6.84,614.2,160.9,1.353,3.0,STRENX 700MC,1,851.3886
+58,B,Deckel vo,Eigenfertigungsteil,6.21,387.6,336.7,2.08,3.0,STRENX 700MC,1,209.0
+59,B,Platte,Eigenfertigungsteil,3.3,128.0,81.0,0.716,15.0,S355MC,0,0.0
+60,B,Deckel,Eigenfertigungsteil,45.25,1428.5,646.7,9.872,3.0,S700MC,0,3600.0
+61,B,Deckel li un,Eigenfertigungsteil,2.92,173.9,122.5,0.427,4.0,S700MC,1,381.23
+62,B,Steg vo li,Eigenfertigungsteil,4.91,297.1,234.4,1.523,6.0,S355MC,2,139.416
+63,B,Stehblech,Eigenfertigungsteil,3.0,242.2,123.0,0.57,4.0,S700MC,0,188.4
+64,B,Strebe li,Eigenfertigungsteil,6.18,524.1,145.4,1.042,3.0,STRENX 700MC,3,878.16
+65,B,Strebe re au,Eigenfertigungsteil,6.61,593.5,145.5,1.215,3.0,STRENX 700MC,3,878.16
+66,B,Strebe vo,Eigenfertigungsteil,2.99,357.1,119.8,0.534,3.0,S355MC,1,710.07
+67,B,Strebe hi,Eigenfertigungsteil,1.15,153.5,123.0,0.251,3.0,S355MC,0,174.27
+68,B,Strebe mi,Eigenfertigungsteil,3.38,382.0,124.0,0.71,3.0,S355MC,2,630.64
+69,B,Strebe li au,Eigenfertigungsteil,6.61,593.5,145.5,1.215,3.0,STRENX 700MC,3,878.16
+70,B,Strebe li in,Eigenfertigungsteil,6.84,614.2,160.9,1.353,3.0,STRENX 700MC,1,851.3886
+71,B,Strebe re,Eigenfertigungsteil,6.39,524.1,145.4,1.042,3.0,STRENX 700MC,3,878.16
+72,B,Strebe mi,Eigenfertigungsteil,3.38,382.0,124.0,0.71,3.0,S355MC,2,630.64
+73,B,Deckel li un,Eigenfertigungsteil,2.92,173.9,122.5,0.427,4.0,S700MC,1,381.23
+74,B,Verstärkung,Eigenfertigungsteil,2.56,350.0,89.0,0.946,5.0,S355MC,0,251.2
+75,B,Verstärkung,Eigenfertigungsteil,0.24,58.0,58.0,0.04,4.0,S355MC,0,0.0
+76,B,Platte,Eigenfertigungsteil,3.12,167.5,163.1,0.802,8.0,S355MC,0,213.52
+77,B,Verstärkung,Eigenfertigungsteil,1.19,180.0,82.0,0.485,5.0,S355MC,0,39.0
+78,B,Abdeckblech,Eigenfertigungsteil,6.29,791.0,175.9,3.214,3.0,S355MC,1,0.0
+79,B,Winkelblech,Eigenfertigungsteil,2.57,207.8,51.0,0.475,10.0,S355MC,1,47.1
+80,B,Platte,Eigenfertigungsteil,2.39,148.8,186.8,0.701,6.0,S355MC,0,229.22
+81,B,Platte,Eigenfertigungsteil,9.83,266.0,245.1,3.265,12.0,S355MC,0,508.08
+82,B,Verstärkung,Eigenfertigungsteil,1.87,161.0,162.1,0.582,3.0,S355MC,1,39.0
+83,B,Endblech,Eigenfertigungsteil,5.31,420.0,211.4,1.954,6.0,S355MC,0,292.098
+84,B,Platte,Eigenfertigungsteil,2.14,187.0,160.8,0.716,6.0,S355MC,0,138.788
+85,B,Rückwand re,Eigenfertigungsteil,24.21,987.3,687.0,14.264,3.0,S355MC,3,407.0
+86,B,Rückwand li,Eigenfertigungsteil,24.63,985.2,687.0,11.934,3.0,S355MC,3,621.0
+87,B,Lagerblech re,Eigenfertigungsteil,7.44,624.2,180.2,2.265,4.0,S355MC,3,424.92
+88,B,Lagerblech li,Eigenfertigungsteil,7.44,624.2,180.2,2.265,4.0,S355MC,3,424.92
+89,B,Verstärkung,Eigenfertigungsteil,0.95,116.6,78.0,0.214,6.0,S355MC,0,64.37
+90,B,Verstärkung,Eigenfertigungsteil,2.0,250.6,217.0,0.354,2.0,DC01-A,3,361.1
+91,B,Träger,Eigenfertigungsteil,25.98,747.9,320.8,7.399,15.0,S355MC,0,406.04
+92,B,Bodenblech li,Eigenfertigungsteil,103.93,2403.0,739.2,42.0,3.0,S355MC,5,1796.08
+93,B,Träger,Eigenfertigungsteil,9.78,518.4,124.4,2.612,15.0,S355MC,0,0.0
+94,B,Platte li,Eigenfertigungsteil,13.45,641.7,218.7,3.958,8.0,S355MC,2,508.2
+95,B,Träger li,Eigenfertigungsteil,22.6,1665.5,173.5,9.034,4.0,S355MC,2,1516.92
+96,B,Konsole,Eigenfertigungsteil,7.73,276.0,185.0,3.047,12.0,S355MC,0,188.4
+97,B,Platte,Eigenfertigungsteil,5.34,281.0,98.0,2.141,12.0,S355MC,0,125.6
+98,B,Verstärkung,Eigenfertigungsteil,2.56,296.8,134.1,1.084,4.0,S355MC,1,0.0
+99,B,Abdeckung,Eigenfertigungsteil,2.51,251.3,64.8,0.5,5.0,S355MC,3,0.0
+100,B,Auflage li,Eigenfertigungsteil,5.97,463.5,188.3,4.766,5.0,S355MC,4,245.84
+101,C,U-Blech,Eigenfertigungsteil,314.66,2488.0,842.8,81.07,5.0,S550MC,2,1878.384
+102,C,Platte,Eigenfertigungsteil,12.45,346.7,285.5,4.098,12.0,S355MC,0,279.8
+103,C,Platte,Eigenfertigungsteil,12.99,351.5,285.5,4.107,12.0,S355MC,0,279.8
+104,C,Blech,Eigenfertigungsteil,12.14,2288.7,179.7,3.218,1.0,DC01-A,3,157.68
+105,C,Deckel,Eigenfertigungsteil,300.02,2488.0,1187.3,46.186,5.0,S550MC,4,1045.28
+106,C,Knotenblech,Eigenfertigungsteil,1.05,123.0,114.0,0.23,8.0,S355MC,0,0.0
+107,C,Platte,Eigenfertigungsteil,4.06,418.6,134.5,1.96,5.0,S355MC,0,94.2
+108,C,Bodenblech li,Eigenfertigungsteil,9.84,1554.6,512.1,6.662,5.0,S550MC,2,1259.516
+109,C,Bodenblech re,Eigenfertigungsteil,9.84,1554.6,512.1,6.654,5.0,S550MC,2,1259.516
+110,C,Getriebehalter,Eigenfertigungsteil,19.69,715.7,268.6,6.28,8.0,S355MC,3,368.14
+111,C,U-Blech,Eigenfertigungsteil,112.8,1300.0,842.8,38.952,5.0,S550MC,2,1274.84
+112,C,Lasche,Eigenfertigungsteil,12.17,287.9,332.2,4.048,12.0,S355MC,0,228.4
+113,C,Blech,Eigenfertigungsteil,6.32,1172.0,179.8,1.634,1.0,DC01-A,3,157.68
+114,C,Deckel,Eigenfertigungsteil,38.68,1113.3,430.6,17.856,6.0,S355MC,0,784.11
+115,C,Flanschplatte,Eigenfertigungsteil,44.3,438.4,456.7,8.279,15.0,S355MC,0,1748.7
+116,C,Platte,Eigenfertigungsteil,1.95,121.9,88.1,0.454,10.0,S355MC,0,143.184
+117,C,Platte,Eigenfertigungsteil,14.89,313.9,294.4,3.419,12.0,S355MC,0,257.48
+118,C,Lasche,Eigenfertigungsteil,8.8,283.6,197.9,2.312,15.0,S355MC,0,163.156
+119,C,Deckel,Eigenfertigungsteil,157.74,1592.6,1178.2,28.184,5.0,S550MC,6,706.06
+120,C,Bodenblech,Eigenfertigungsteil,24.32,645.4,830.6,6.296,5.0,S550MC,4,802.78
+121,C,Bodenblech,Eigenfertigungsteil,26.44,709.7,831.5,5.77,5.0,S550MC,2,1585.92
+122,C,Getriebekonsole,Eigenfertigungsteil,29.74,532.7,210.0,4.473,8.0,S355MC,3,524.38
+123,C,U-Blech,Eigenfertigungsteil,179.36,2004.1,838.2,49.391,5.0,S550MC,2,1302.088
+124,C,Platte,Eigenfertigungsteil,10.17,288.0,255.0,2.968,12.0,S355MC,0,157.0
+125,C,Platte,Eigenfertigungsteil,8.85,287.8,233.0,2.847,12.0,S355MC,0,0.0
+126,C,Knotenblech,Eigenfertigungsteil,6.26,342.0,84.3,1.652,15.0,S355MC,0,25.12
+127,C,Deckel,Eigenfertigungsteil,295.3,1988.5,1479.8,37.901,5.0,S550MC,4,453.06
+128,C,Lasche vo,Eigenfertigungsteil,13.58,695.7,211.0,6.262,8.0,S355MC,0,527.652
+129,C,Lasche hi,Eigenfertigungsteil,12.79,690.0,198.7,5.926,8.0,S355MC,0,371.022
+130,C,Lasche,Eigenfertigungsteil,14.76,516.0,298.6,4.67,10.0,S355MC,0,207.02
+131,C,Lasche,Eigenfertigungsteil,14.14,520.0,292.0,4.569,10.0,S355MC,0,207.02
+132,C,Verstärkung vo,Eigenfertigungsteil,10.37,394.7,289.5,3.864,12.0,S355MC,0,376.08
+133,C,Verstärkung hi,Eigenfertigungsteil,10.28,366.1,177.2,3.429,12.0,S355MC,0,465.806
+134,C,Flanschplatte,Eigenfertigungsteil,15.31,315.6,283.0,3.141,12.0,S355MC,0,258.24
+135,C,Oberteil,Eigenfertigungsteil,33.8,1644.7,350.8,17.396,6.0,S355MC,0,987.6
+136,C,Unterteil,Eigenfertigungsteil,113.17,1651.0,870.6,46.531,6.0,S355MC,4,2359.21
+137,D,Lochplatte,Eigenfertigungsteil,11.71,332.0,225.0,3.01,8.0,S355MC,1,1661.0
+138,D,Winkel,Eigenfertigungsteil,3.57,237.0,110.0,0.702,8.0,S355MC,1,523.0
+139,D,Längsträger li ob,Eigenfertigungsteil,33.12,1184.0,418.9,15.5,6.0,S355MC,3,123.0
+140,D,Einhängelasche,Eigenfertigungsteil,6.99,332.0,212.0,2.5,10.0,S355MC,0,125.0
+141,D,Knotenblech,Eigenfertigungsteil,6.58,520.0,214.0,1.9864,6.0,S355MC,1,220.0
+142,D,Rippe,Eigenfertigungsteil,3.76,149.8,125.8,0.2,12.0,S355MC,1,110.0
+143,D,Konsole re,Eigenfertigungsteil,10.63,400.0,213.0,3.6756,10.0,S355MC,2,316.0
+144,D,Lasche,Eigenfertigungsteil,1.48,136.0,72.0,0.219,6.0,S355MC ,1,167.0
+145,D,Platte,Eigenfertigungsteil,3.57,96.0,96.0,0.42,8.0,S355MC ,0,266.0
+146,D,Lasche re,Eigenfertigungsteil,3.58,276.0,130.0,0.5432,8.0,S355MC ,2,185.0
+147,D,Knotenblech,Eigenfertigungsteil,2.09,319.0,138.5,0.7334,6.0,S355MC ,0,104.0
+148,D,Knotenblech,Eigenfertigungsteil,2.43,226.3,220.0,0.7602,6.0,S355MC ,0,44.0
+149,D,Lasche li,Eigenfertigungsteil,3.34,190.2,166.8,0.535,6.0,S355MC ,3,167.0
