@@ -47,3 +47,5 @@ coverage.xml
 catboost_info/
 catboost_model.bin
 catboost_pool.bin
+
+.DS_Store
