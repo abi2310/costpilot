@@ -1,0 +1,103 @@
+Feature,Coefficient
+Bezeichnung_Getriebekonsole,17.395590269348116
+Bezeichnung_Flanschplatte,7.728455664152621
+Bezeichnung_Zwischenblech,7.11107899869604
+Bezeichnung_U-Blech,5.727450445770588
+Bezeichnung_Winkelblech mi,5.1515887195447565
+Bezeichnung_Abdeckung,4.993182553493822
+Bezeichnung_Anschlag,4.946397139693584
+Material_Hardox 400,4.512582328894722
+Bezeichnung_Verschleissblech,3.606644332294282
+Bezeichnung_Knotenblech li,3.255213282893771
+Bezeichnung_Bodenblech,3.110684899721706
+Bezeichnung_Knotenblech re,3.048754845098377
+Bezeichnung_Profil,3.015613952943667
+Bezeichnung_Z Profil,2.9490531525322212
+Bezeichnung_Steg vo li,2.6702936160607877
+Bezeichnung_Steg re,2.538870484057336
+Bezeichnung_Steg li,2.5388704839160647
+Bezeichnung_Getriebehalter,2.5288184871805663
+Bauteilgewicht in kg,2.193241551500077
+Bezeichnung_Lagerblech li,1.9851699297437744
+Bezeichnung_Lagerblech re,1.9851699297311942
+Bezeichnung_Ausgleichsscheibe,1.9169628332359423
+Bezeichnung_Lasche li,1.8495545580053179
+Bezeichnung_Verstärkung,1.7587822761551575
+Bezeichnung_Stehblech,1.4513147725429079
+Bezeichnung_Deckel li un,1.4481611873776874
+Bezeichnung_Buegel,1.4430539549796242
+Bezeichnung_Auflageplatte,1.3846791595595977
+Material_S235JR,1.353968377026614
+Bezeichnung_Steg,1.3539683761465295
+Bezeichnung_Winkel re,1.2050391136514145
+Bezeichnung_Träger,1.0010922439790022
+Bezeichnung_Platte,0.9670770762073304
+Bezeichnung_Mantel,0.9059379966079166
+Bezeichnung_Lasche re,0.8660235923161901
+Bezeichnung_Verstärkung ,0.7434369682631812
+Bezeichnung_Deckel vo,0.7108119118150151
+Bezeichnung_Platte li,0.695268402878904
+Bezeichnung_Winkel li,0.6474256970964953
+Bezeichnung_Strebe mi,0.5123886345662445
+Bezeichnung_Abweiser,0.48986605048847126
+Materialsärke in mm,0.4796733496746478
+Material_STRENX 700MC,0.40796881554149955
+Bezeichnung_C Profil,0.3654383996478727
+Bezeichnung_Konsole re,0.20493851699595922
+Bezeichnung_Konsole,0.15961898506996497
+Bezeichnung_Strebe re,0.09381267821570471
+Bereich_D,0.02335795837188659
+Bezeichnung_Knoten,0.015714305649852545
+Gesamtlänge aller Aussparungen in mm,0.005911525547080743
+Breite Laserzuschnitt in mm 1,0.0005753946204966483
+Flaeche,1.978099457067284e-05
+Bezeichnung_Strebe re in,6.369109996893531e-10
+Bezeichnung_Endblech,3.973029683024265e-10
+Bezeichnung_Steg vo re,3.6833926026977834e-10
+Bezeichnung_Strebe vo,2.122738651522127e-10
+Bezeichnung_Deckel re un,1.8140156043955358e-10
+Bezeichnung_Strebe re au,3.523359382029412e-11
+Material_HARDOX400,8.822966229143914e-16
+Bezeichnung_Strebe hi,-6.667955076977705e-11
+Bezeichnung_Seitenwand li,-1.19853460489594e-10
+Bezeichnung_Strebe li in,-2.4497825990010824e-10
+Bezeichnung_Träger li,-4.637555166275842e-10
+Bezeichnung_Längsträger li ob,-6.111799955021979e-10
+Bezeichnung_Blech ,-1.2992682485446494e-09
+Breite Laserzuschnitt in mm 2,-0.006543851550334172
+Dichte,-0.06362936753324488
+Bezeichnung_Strebe li,-0.1161873217806546
+Bezugsquelle_Kaufteil,-0.1491237618512784
+Bezeichnung_Lasche,-0.16106271326678762
+Bereich_C,-0.2617208180039392
+Bezeichnung_Strebe li au,-0.28046845203950255
+Material_S700MC,-0.34909222640545146
+Bezeichnung_Füllplatte re,-0.4449997547785358
+Bezeichnung_Rippe,-0.5090747879541908
+Bezeichnung_Knotenblech,-0.5826907181358774
+Anzahl der Abkantungen,-0.6412525476640817
+Bezeichnung_Einweisblech,-0.8468038620789712
+Bezeichnung_Lochblech,-0.886616199700331
+Bezeichnung_Auflage li,-0.9125201665233478
+Material_S355MC ,-0.9696568175729823
+Material_S355MC,-1.0522821580650454
+Bezeichnung_Einhängelasche,-1.169377656736179
+Bereich_B,-1.3246967946116985
+Bezeichnung_Platte re,-1.3681531246743424
+Material_S550MC,-1.6261522270540336
+Bezeichnung_Verstärkung hi,-1.6409926507010768
+Bezeichnung_Seitenblech,-1.6887613243162742
+Bezeichnung_Blech,-2.156410129771359
+Bezeichnung_Winkelblech,-2.622479098346436
+Bezeichnung_Verstärkung vo,-3.4448369092772184
+Bezeichnung_Winkel,-3.9997382169963096
+Bezeichnung_Lasche hi,-4.21598424004624
+Bezeichnung_Lochplatte,-4.743904532877382
+Bezeichnung_Lasche vo,-5.239196423760637
+Bezeichnung_Rückwand li,-10.924837756717247
+Bezeichnung_Deckel,-11.858479079296966
+Bezeichnung_Rückwand re,-15.003578209426728
+Bezeichnung_Oberteil,-20.13462364551757
+Bezeichnung_Unterteil,-23.688360728424442
+Bezeichnung_Bodenblech re,-24.42052187296156
+Bezeichnung_Bodenblech li,-24.75421135372025

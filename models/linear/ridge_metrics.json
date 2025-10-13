@@ -1,0 +1,10 @@
+{
+    "timestamp": "2025-10-13 14:47:56",
+    "model_path": "models/linear\\ridge_model.pkl",
+    "metrics": {
+        "MAE": 2.8958164491127434,
+        "MSE": 87.55592314707013,
+        "R2": 0.7733398568651804
+    },
+    "model_type": "Ridge"
+}

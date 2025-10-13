@@ -1,0 +1,10 @@
+{
+    "timestamp": "2025-10-13 14:47:56",
+    "model_path": "models/linear\\lasso_model.pkl",
+    "metrics": {
+        "MAE": 3.0296379583299333,
+        "MSE": 90.8288989887715,
+        "R2": 0.7648669501092236
+    },
+    "model_type": "Lasso"
+}
