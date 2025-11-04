@@ -1,9 +1,8 @@
-import os
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 import json
 import pandas as pd
-from langchain.chat_models import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema import StrOutputParser
 from dotenv import load_dotenv
 
 try:
@@ -13,36 +12,38 @@ except ImportError:
 
 
 llm = ChatOpenAI(
-    model="gpt-5-nano",      
-    temperature=1,
+    model="gpt-5-nano"
 )
 
 
-instruction_deutsch = (
-    "Du bist ein KI-Assistent, der ein Kostenprognosemodell (Ridge Regression) erklärt. "
-    "Du erhältst eine Modellvorhersage (z. B. Preis) und eine Liste mit SHAP-Werten, "
-    "die zeigen, welche Merkmale welchen Einfluss auf den Preis hatten. "
-    "Deine Aufgabe ist es, diese Werte zu interpretieren und die Nutzerfrage verständlich, "
-    "präzise und datenbasiert zu beantworten. "
-    "Verwende dabei Fachsprache aus der Fertigung und Kostenanalyse, "
-    "aber erkläre sie so, dass auch ein Ingenieur ohne Data-Science-Hintergrund sie versteht. "
-    "Wenn nach Optimierung gefragt wird (z. B. 'Wie kann ich Kosten um 10 % senken?'), "
-    "gib konkrete Vorschläge auf Basis der einflussreichsten SHAP-Werte."
+SYSTEM_PROMPT = (
+    "Du bist ein KI-Assistent für Kostenanalyse, der ein Kostenprognosemodell (Ridge Regression) erklärt. "
+    "Du erhältst eine Modellvorhersage (Preis in €) und SHAP-Werte pro Feature. "
+    "Ziel: verständliche, präzise, datenbasierte Erklärung für Ingenieur:innen ohne Data-Science-Hintergrund. "
+    "Nutze Fachsprache aus Fertigung/Kostenanalyse, aber ohne Jargon-Overkill. "
+    "Nenne keine Annahmen, die nicht aus den Daten ableitbar sind. "
+    "Wenn nach Optimierung/Reduktion gefragt wird, gib konkrete Vorschläge basierend auf den einflussstärksten SHAP-Werten. "
+    "Antworte ausschließlich auf Basis der gelieferten SHAP-Daten und Frage."
 )
 
-prompt_template = ChatPromptTemplate.from_messages([
-    ("system", instruction_deutsch),
-    (
-        "human",
-        "Vorhersage: {prediction} €\n\n"
-        "SHAP-Werte (Einfluss jedes Features):\n{shap_json}\n\n"
-        "Nutzerfrage:\n{question}\n"
-        "Bitte antworte klar, fachlich fundiert und datenbasiert."
-    ),
+HUMAN_TEMPLATE = (
+    "Vorhersage (Preis): {prediction} €\n\n"
+    "SHAP-Werte (JSON, eine Zeile pro Beobachtung/Feature-Set):\n```json\n{shap_json}\n```\n\n"
+    "Nutzerfrage:\n{question}\n\n"
+    "Antworte im folgenden Format:\n"
+    "1) Kurzfazit (1–2 Sätze)\n"
+    "2) Wichtigste Kostentreiber (Top 5; jeweils: Feature, SHAP-Wert, Richtung ↑/↓, kurzer Effekt)\n"
+    "3) Begründung (wie SHAP interpretiert wurde; keine Methodenerklärung, nur das Nötigste)\n"
+    "4) Handlungsempfehlungen (konkret, priorisiert; falls Reduktionsziel genannt: Bezug zur Prozentzahl)\n"
+    "5) Grenzen/Unsicherheiten (max. 2 Bullet Points)\n"
+)
+
+prompt = ChatPromptTemplate.from_messages([
+    ("system", SYSTEM_PROMPT),
+    ("human", HUMAN_TEMPLATE),
 ])
 
-
-explain_chain = prompt_template | llm | StrOutputParser()
+explain_chain = prompt | llm | StrOutputParser()
 
 
 
@@ -53,12 +54,15 @@ def ask_llm_with_shap(shap_df: pd.DataFrame, prediction: float, question: str) -
     """
     shap_json = shap_df.to_dict(orient="records")
     shap_json_str = json.dumps(shap_json, indent=2, ensure_ascii=False)
-
+    print("SHAP JSON:", shap_json_str)  # Debug-Ausgabe
+    print("Prediction:", prediction)  # Debug-Ausgabe
+    print("Question:", question)  # Debug-Ausgabe   
     response = explain_chain.invoke({
         "prediction": prediction,
         "shap_json": shap_json_str,
         "question": question
     })
+    print(response)
 
     return response.strip()
 
