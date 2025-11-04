@@ -25,9 +25,7 @@ SYSTEM_PROMPT = (
 
     "Richtlinien:\n"
     "- Maximal 8 Sätze.\n"
-    "- Fokus auf: was treibt Kosten, was senkt sie.\n"
-    "- Bei SHAP: nur Richtung (↑ teurer / ↓ günstiger) und grobe Stärke.\n"
-    "- Empfehlungen müssen realistisch und umsetzbar sein: Materialwahl, Geometrie, Design-Optimierung, Fertigung.\n"
+    "- Empfehlungen müssen realistisch und umsetzbar sein.\n"
     "- Wenn Nutzer nach Einsparung fragt (z. B. 10 %), gib konkrete Handlungsschritte.\n"
     "- Kein Modell-, SHAP- oder Statistik-Jargon. Keine Formeln.\n"
     "- Nur Informationen nutzen, die direkt aus SHAP kommen.\n"
@@ -40,7 +38,6 @@ HUMAN_TEMPLATE = (
 
     "Antwortformat:\n"
     "- Kurzfazit (1–2 Sätze)\n"
-    "- Top-Kostentreiber (max. 3; Format: Feature – ↑/↓ – kurzer Effekt)\n"
     "- Konkrete Maßnahmen (3 Punkte, einfache Sprache)\n"
     "- Ein Satz zu Unsicherheit/Technik-Machbarkeit\n"
 )

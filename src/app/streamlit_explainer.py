@@ -120,7 +120,6 @@ if submitted:
         st.error(f"Fehler bei der Vorhersage: {e}")
 
 # === Chatbereich nach der Vorhersage ===
-# === Chatbereich nach der Vorhersage ===
 if "prediction" in st.session_state:
     st.markdown("---")
     st.header("💬 CostPilot Chat")
