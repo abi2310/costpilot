@@ -14,8 +14,7 @@ except ImportError:
 
 llm = ChatOpenAI(
     model="gpt-5-nano",      
-    temperature=0.2,
-    max_retries=2
+    temperature=1,
 )
 
 
@@ -47,20 +46,19 @@ explain_chain = prompt_template | llm | StrOutputParser()
 
 
 
+
 def ask_llm_with_shap(shap_df: pd.DataFrame, prediction: float, question: str) -> str:
     """
-    Nimmt SHAP-Werte + Modellvorhersage + Nutzerfrage und liefert eine
-    natürlichsprachliche Antwort vom LLM.
+    Übergibt SHAP-Werte + Modellvorhersage + Nutzerfrage an das LLM und gibt die Antwort zurück.
     """
-
     shap_json = shap_df.to_dict(orient="records")
-    shap_json = json.dumps(shap_json, indent=2, ensure_ascii=False)
+    shap_json_str = json.dumps(shap_json, indent=2, ensure_ascii=False)
 
-
-    answer = explain_chain.invoke({
+    response = explain_chain.invoke({
         "prediction": prediction,
-        "shap_json": shap_json,
+        "shap_json": shap_json_str,
         "question": question
     })
 
-    return answer.strip()
+    return response.strip()
+
