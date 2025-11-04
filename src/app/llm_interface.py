@@ -38,8 +38,7 @@ HUMAN_TEMPLATE = (
 
     "Antwortformat:\n"
     "- Kurzfazit (1–2 Sätze)\n"
-    "- Konkrete Maßnahmen (3 Punkte, einfache Sprache)\n"
-    "- Ein Satz zu Unsicherheit/Technik-Machbarkeit\n"
+    "- Konkrete Maßnahmen (einfache Sprache) aber sehr konkret anhand der Shap werte z.b sagen wie viel Fläche reduzieren soll \n"
 )
 
 prompt = ChatPromptTemplate.from_messages([
