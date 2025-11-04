@@ -120,19 +120,46 @@ if submitted:
         st.error(f"Fehler bei der Vorhersage: {e}")
 
 # === Chatbereich nach der Vorhersage ===
+# === Chatbereich nach der Vorhersage ===
 if "prediction" in st.session_state:
     st.markdown("---")
     st.header("💬 CostPilot Chat")
 
+    # Init chat history
     if "messages" not in st.session_state:
         st.session_state["messages"] = [
-            {"role": "assistant", "content": f"Ich habe eine Kostenschätzung von **{st.session_state['prediction']:,.2f} €** berechnet. Was möchtest du darüber wissen?"}
+            {"role": "assistant",
+             "content": f"Ich habe eine Kostenschätzung von **{st.session_state['prediction']:,.2f} €** berechnet. Was möchtest du darüber wissen?"}
         ]
 
-    for msg in st.session_state["messages"]:
-        css_class = "user" if msg["role"] == "user" else "assistant"
-        st.markdown(f"<div class='chat-bubble {css_class}'>{msg['content']}</div>", unsafe_allow_html=True)
+    # Show pending loader
+    if st.session_state.get("waiting_for_response", False):
+        st.info("⏳ KI denkt nach...")
 
+    # Render messages
+    for msg in st.session_state["messages"]:
+        bubble = "user" if msg["role"] == "user" else "assistant"
+        st.markdown(f"<div class='chat-bubble {bubble}'>{msg['content']}</div>", unsafe_allow_html=True)
+
+    # CASE 1: We still need to process a pending message (after rerun)
+    if st.session_state.get("waiting_for_response") and "pending_user_message" in st.session_state:
+        question = st.session_state.pop("pending_user_message")
+        shap_df = pd.DataFrame(st.session_state.get("shap_df"))
+        prediction = st.session_state.get("prediction")
+
+        try:
+            answer = ask_llm_with_shap(shap_df, prediction, question)
+            st.session_state["messages"].append({"role": "assistant", "content": answer})
+        except Exception as e:
+            st.session_state["messages"].append({
+                "role": "assistant",
+                "content": f"⚠️ Fehler bei der Analyse: {e}"
+            })
+
+        st.session_state["waiting_for_response"] = False
+        st.rerun()
+
+    # CASE 2: No pending message → show input box
     user_input = st.text_input(
         "Deine Frage:",
         placeholder="Frag mich etwas zur Vorhersage oder zu den Einflussfaktoren...",
@@ -140,20 +167,13 @@ if "prediction" in st.session_state:
     )
 
     if user_input:
+        # Add user message ONCE
         st.session_state["messages"].append({"role": "user", "content": user_input})
 
-        try:
-            shap_df = pd.DataFrame(st.session_state.get("shap_df"))
-            prediction = st.session_state.get("prediction")
-            answer = ask_llm_with_shap(shap_df, prediction, user_input)
-            st.session_state["messages"].append({"role": "assistant", "content": answer})
+        # Store & trigger processing
+        st.session_state["pending_user_message"] = user_input
+        st.session_state["waiting_for_response"] = True
 
-        except Exception as e:
-            st.session_state["messages"].append({
-                "role": "assistant",
-                "content": f"⚠️ Fehler bei der Analyse: {e}"
-            })
-
-        # statt st.session_state["chat_input"] = ""
+        # Clear text input box cleanly
         st.session_state.pop("chat_input", None)
         st.rerun()
