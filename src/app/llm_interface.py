@@ -17,25 +17,32 @@ llm = ChatOpenAI(
 
 
 SYSTEM_PROMPT = (
-    "Du bist ein KI-Assistent für Kostenanalyse, der ein Kostenprognosemodell (Ridge Regression) erklärt. "
-    "Du erhältst eine Modellvorhersage (Preis in €) und SHAP-Werte pro Feature. "
-    "Ziel: verständliche, präzise, datenbasierte Erklärung für Ingenieur:innen ohne Data-Science-Hintergrund. "
-    "Nutze Fachsprache aus Fertigung/Kostenanalyse, aber ohne Jargon-Overkill. "
-    "Nenne keine Annahmen, die nicht aus den Daten ableitbar sind. "
-    "Wenn nach Optimierung/Reduktion gefragt wird, gib konkrete Vorschläge basierend auf den einflussstärksten SHAP-Werten. "
-    "Antworte ausschließlich auf Basis der gelieferten SHAP-Daten und Frage."
+    "Du bist ein KI-Assistent für Fertigungskosten. "
+    "Du bekommst eine Preisvorhersage und SHAP-Werte. "
+    "Ziel: sehr klare, kurze, praxistaugliche Erklärungen für Ingenieure. "
+    "Keine Data-Science-Fachsprache, keine Theorie. "
+    "Sprich wie ein Kosten-/Fertigungsingenieur.\n\n"
+
+    "Richtlinien:\n"
+    "- Maximal 8 Sätze.\n"
+    "- Fokus auf: was treibt Kosten, was senkt sie.\n"
+    "- Bei SHAP: nur Richtung (↑ teurer / ↓ günstiger) und grobe Stärke.\n"
+    "- Empfehlungen müssen realistisch und umsetzbar sein: Materialwahl, Geometrie, Design-Optimierung, Fertigung.\n"
+    "- Wenn Nutzer nach Einsparung fragt (z. B. 10 %), gib konkrete Handlungsschritte.\n"
+    "- Kein Modell-, SHAP- oder Statistik-Jargon. Keine Formeln.\n"
+    "- Nur Informationen nutzen, die direkt aus SHAP kommen.\n"
 )
 
 HUMAN_TEMPLATE = (
-    "Vorhersage (Preis): {prediction} €\n\n"
-    "SHAP-Werte (JSON, eine Zeile pro Beobachtung/Feature-Set):\n```json\n{shap_json}\n```\n\n"
-    "Nutzerfrage:\n{question}\n\n"
-    "Antworte im folgenden Format:\n"
-    "1) Kurzfazit (1–2 Sätze)\n"
-    "2) Wichtigste Kostentreiber (Top 5; jeweils: Feature, SHAP-Wert, Richtung ↑/↓, kurzer Effekt)\n"
-    "3) Begründung (wie SHAP interpretiert wurde; keine Methodenerklärung, nur das Nötigste)\n"
-    "4) Handlungsempfehlungen (konkret, priorisiert; falls Reduktionsziel genannt: Bezug zur Prozentzahl)\n"
-    "5) Grenzen/Unsicherheiten (max. 2 Bullet Points)\n"
+    "Vorhersage: {prediction} €\n"
+    "SHAP:\n```json\n{shap_json}\n```\n"
+    "Frage des Nutzers:\n{question}\n\n"
+
+    "Antwortformat:\n"
+    "- Kurzfazit (1–2 Sätze)\n"
+    "- Top-Kostentreiber (max. 3; Format: Feature – ↑/↓ – kurzer Effekt)\n"
+    "- Konkrete Maßnahmen (3 Punkte, einfache Sprache)\n"
+    "- Ein Satz zu Unsicherheit/Technik-Machbarkeit\n"
 )
 
 prompt = ChatPromptTemplate.from_messages([

@@ -37,9 +37,8 @@ st.markdown("Gib unten deine Eingabedaten ein, um eine Vorhersage zu erhalten �
 
 # === Modell & Daten laden ===
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.normpath(os.path.join(BASE_DIR, "..", "..", "models", "linear", "optimized", "ridge_optimized_model.pkl"))
+MODEL_PATH = os.path.normpath(os.path.join(BASE_DIR, "..", "..", "models", "linear", "pipeline", "elasticnet_pipeline.pkl"))
 DATA_PATH_ORIGINAL = os.path.normpath(os.path.join(BASE_DIR, "..", "..", "data", "processed", "cleaned_data.csv"))
-DATA_PATH_ENCODED = os.path.normpath(os.path.join(BASE_DIR, "..", "..","models", "linear", "optimized", "cleaned_data_one_hot_encoding.csv"))
 
 if not os.path.exists(MODEL_PATH):
     st.error("❌ Kein Modell gefunden! Bitte zuerst das Ridge-Modell trainieren und speichern.")
@@ -47,13 +46,12 @@ if not os.path.exists(MODEL_PATH):
 
 model = joblib.load(MODEL_PATH)
 data_original = pd.read_csv(DATA_PATH_ORIGINAL)
-data_encoded = pd.read_csv(DATA_PATH_ENCODED)
 
 # === Zielvariable entfernen ===
 TARGET_COL = "Preis"
-for df in [data_original, data_encoded]:
-    if TARGET_COL in df.columns:
-        df.drop(columns=[TARGET_COL], inplace=True)
+if TARGET_COL in data_original.columns:
+    data_original = data_original.drop(columns=[TARGET_COL])
+
 
 # === Spaltenarten erkennen ===
 categorical_cols = data_original.select_dtypes(include=['object', 'category']).columns.tolist()
@@ -72,8 +70,7 @@ with st.form("eingabeformular"):
     # kategorische Felder
     for col in categorical_cols:
         options = sorted(data_original[col].dropna().unique().tolist())
-        selected = st.selectbox(f"{col}", ["- Bitte auswählen -"] + options)
-        user_inputs[col] = selected
+        user_inputs[col] = st.selectbox(col, ["- Bitte auswählen -"] + options)
 
     submitted = st.form_submit_button("Vorhersage starten 🚀")
 
@@ -84,55 +81,39 @@ if submitted:
         df_input = pd.DataFrame([user_inputs])
         df_input.replace("- Bitte auswählen -", np.nan, inplace=True)
 
-        # Gleiche One-Hot-Encoding-Logik wie beim Training
-        df_encoded = pd.get_dummies(df_input, drop_first=False)
+        prediction = float(model.predict(df_input)[0])
 
-        # Fehlende Spalten aus Trainingsdaten hinzufügen
-        for col in data_encoded.columns:
-          if col not in df_encoded.columns:
-               df_encoded[col] = 0
+        # Pipeline-Preprocessing separat ausführen
+        preprocessor = model.named_steps["prep"]
+        regressor = model.named_steps["model"]
 
-        # Überflüssige Spalten entfernen (falls vorhanden)
-        df_encoded = df_encoded[data_encoded.columns]
-        df_encoded = df_encoded.reset_index(drop=True)
-        # st.write("✅ Finales Input fürs Modell:", df_encoded)
-        try:
-            # Falls Modell eine Pipeline ist → Regressor extrahieren
-            base_model = model.named_steps["ridge"] if hasattr(model, "named_steps") else model
-            background = data_encoded.sample(min(200, len(data_encoded)), random_state=42)
+        background = data_original.sample(min(300, len(data_original)), random_state=42)
 
-            explainer = shap.LinearExplainer(
-                base_model,
-                background,
-                feature_perturbation="interventional"
-            )
+        X_background = preprocessor.transform(background)
+        if hasattr(X_background, "toarray"):
+            X_background = X_background.toarray()
+        X_input = preprocessor.transform(df_input)
+        if hasattr(X_input, "toarray"):
+            X_input = X_input.toarray()
 
-        except Exception as e:
-            st.error(f"SHAP konnte nicht initialisiert werden: {e}")
-            st.stop()
+        explainer = shap.LinearExplainer(regressor, X_background)
+        shap_values = explainer(X_input)
 
-        # SHAP-Werte für aktuelle Eingabe berechnen
-        shap_values = explainer.shap_values(df_encoded)
-        instance_shap = shap_values[0]  # rohwerte für dieses sample
+        instance_shap = shap_values.values[0]
 
-        instance = df_encoded.iloc[0]
-
-        # Ergebnis-DatenFrame
         shap_df = pd.DataFrame({
-            "feature": df_encoded.columns,
-            "value": instance.values,
-            "shap_value": instance_shap
+            "feature": preprocessor.get_feature_names_out(),
+            "value": X_input[0].tolist(),
+            "shap_value": instance_shap.tolist()
         })
 
-        prediction = float(model.predict(df_encoded)[0])
-
-        # In Session speichern, um später an LLM zu übergeben
         st.session_state["prediction"] = prediction
-        st.session_state["shap_df"] = shap_df
+        st.session_state["shap_df"] = shap_df.to_dict(orient="records")
         st.session_state["user_inputs"] = user_inputs
 
         st.markdown("---")
-        st.success(f"Geschätzte Kosten: **{prediction:,.2f} €**")
+        st.success(f"Geschätzte Kosten: **{prediction:,.2f} €** ✅")
+
 
 
     except Exception as e:
@@ -162,7 +143,7 @@ if "prediction" in st.session_state:
         st.session_state["messages"].append({"role": "user", "content": user_input})
 
         try:
-            shap_df = st.session_state.get("shap_df")
+            shap_df = pd.DataFrame(st.session_state.get("shap_df"))
             prediction = st.session_state.get("prediction")
             answer = ask_llm_with_shap(shap_df, prediction, user_input)
             st.session_state["messages"].append({"role": "assistant", "content": answer})
