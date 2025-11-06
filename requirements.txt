@@ -50,11 +50,11 @@ kaggle==1.7.4.5
 kiwisolver==1.4.8
 langchain==0.3.7
 langchain-classic==1.0.0
-langchain-community==0.4.1
-langchain-core==1.0.3
+langchain-community==0.3.7
+langchain-core==0.3.23
 langchain-openai==1.0.2
 langchain-text-splitters==1.0.0
-langsmith==0.4.40
+langsmith==0.1.18
 llvmlite==0.45.1
 load-dotenv==0.1.0
 markdown-it-py==3.0.0
