@@ -16,7 +16,8 @@ except ImportError:
 
 
 llm = ChatOpenAI(
-    model="gpt-5-nano"
+    model="gpt-5-nano",
+    temperature=1
 )
 
 
