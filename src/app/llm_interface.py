@@ -4,7 +4,11 @@ from langchain_core.output_parsers import StrOutputParser
 import json
 import pandas as pd
 from dotenv import load_dotenv
+import streamlit as st
+import openai
+import os
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
 try:
     load_dotenv()
 except ImportError:
