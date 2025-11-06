@@ -64,6 +64,8 @@ user_inputs = {}
 with st.form("eingabeformular"):
     # numerische Felder
     for col in numerical_cols:
+        if col in ["Flaeche", "Dichte"]:
+            continue  # diese beiden werden automatisch berechnet
         default_val = float(data_original[col].median()) if not data_original[col].isnull().all() else 0.0
         user_inputs[col] = st.number_input(f"{col}", value=default_val)
 
@@ -77,9 +79,33 @@ with st.form("eingabeformular"):
 # === Prediction + Chat-Start ===
 if submitted:
     try:
-        # Eingaben als DataFrame
+                # Eingaben als DataFrame
         df_input = pd.DataFrame([user_inputs])
         df_input.replace("- Bitte auswählen -", np.nan, inplace=True)
+
+        # --- Automatische Feature-Berechnung ---
+        if (
+            "Breite Laserzuschnitt in mm 1" in df_input.columns
+            and "Breite Laserzuschnitt in mm 2" in df_input.columns
+        ):
+            df_input["Flaeche"] = (
+                df_input["Breite Laserzuschnitt in mm 1"]
+                * df_input["Breite Laserzuschnitt in mm 2"]
+            )
+        else:
+            df_input["Flaeche"] = np.nan
+
+        if (
+            "Bauteilgewicht in kg" in df_input.columns
+            and "Flaeche" in df_input.columns
+        ):
+            df_input["Dichte"] = (
+                (df_input["Bauteilgewicht in kg"] / df_input["Flaeche"]) * 1_000_000
+            )
+        else:
+            df_input["Dichte"] = np.nan
+        # --------------------------------------
+
 
         prediction = float(model.predict(df_input)[0])
 
