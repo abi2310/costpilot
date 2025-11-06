@@ -114,10 +114,46 @@ if submitted:
         st.markdown("---")
         st.success(f"Geschätzte Kosten: **{prediction:,.2f} €** ✅")
 
+      
+        # === SHAP Visualisierung: Nur Eingaben des Users anzeigen ===
+        st.subheader("Top 10 Einfluss deiner Eingaben auf die Kostenschätzung")
 
+        shap_df = pd.DataFrame(st.session_state["shap_df"])
+
+        # Filter: nur Features, die durch den User aktiv gesetzt sind
+        # Numerisch: value != 0
+        # Kategorisch (OHE): value == 1
+        shap_df_user = shap_df[
+            ((shap_df["feature"].str.startswith("num_")) & (shap_df["value"] != 0)) |
+            ((shap_df["feature"].str.startswith("cat_")) & (shap_df["value"] == 1))
+        ]
+
+        # Falls nichts übrig → trotzdem Top n zeigen
+        if shap_df_user.empty:
+            shap_df_user = shap_df.copy()
+
+        # Sortieren nach Einfluss
+        shap_df_user["abs_val"] = shap_df_user["shap_value"].abs()
+        shap_df_user = shap_df_user.sort_values("abs_val", ascending=False).head(10)
+
+        # Plot
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots(figsize=(8, 5))
+        ax.barh(shap_df_user["feature"], shap_df_user["shap_value"])
+        ax.set_xlabel("Einfluss auf die Kosten (SHAP-Value)")
+        ax.set_ylabel("Feature")
+        ax.set_title("Einfluss deiner gewählten Eingaben")
+        ax.axvline(0, linestyle="--")
+        plt.tight_layout()
+        st.pyplot(fig)
+
+        # Highlight Top-Faktor
+        top_feature = shap_df_user.iloc[0]["feature"]
+        st.info(f"💡 Wichtigster Kostentreiber aus **deiner Auswahl**: `{top_feature}`")
 
     except Exception as e:
         st.error(f"Fehler bei der Vorhersage: {e}")
+
 
 # === Chatbereich nach der Vorhersage ===
 if "prediction" in st.session_state:
