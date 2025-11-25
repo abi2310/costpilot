@@ -1,10 +1,10 @@
 {
-    "timestamp": "2025-10-13 16:33:40",
-    "model_path": "models/tree\\decision_tree_squared_error_model.pkl",
+    "timestamp": "2025-11-06 16:54:24",
+    "model_path": "models/tree/decision_tree_squared_error_model.pkl",
     "metrics": {
-        "MAE": 2.5914150992685476,
-        "MSE": 34.1566829252181,
-        "R2": 0.911576985741602
+        "MAE": 2.5914150992685467,
+        "MSE": 34.15668292521808,
+        "R2": 0.9115769857416021
     },
     "model_type": "DecisionTree_squared_error"
 }

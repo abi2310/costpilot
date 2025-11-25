@@ -1,103 +1,99 @@
 Feature,Importance
 Bauteilgewicht in kg,0.9928086447509875
-Anzahl der Abkantungen,0.005973055359229814
-Materialsärke in mm,0.0004952343544365304
-Gesamtlänge aller Aussparungen in mm,0.0004826485714303491
-Flaeche,0.00024041696391570837
-Breite Laserzuschnitt in mm 2,0.0
+Anzahl der Abkantungen,0.00597305535922984
+Materialsärke in mm,0.0004952343544365436
+Gesamtlänge aller Aussparungen in mm,0.00048264857143030956
+Flaeche,0.0002404169639157079
 Breite Laserzuschnitt in mm 1,0.0
+Bezeichnung_steg vo li,0.0
+Bezeichnung_strebe re au,0.0
+Bezeichnung_strebe re,0.0
+Bezeichnung_strebe mi,0.0
+Bezeichnung_strebe li in,0.0
+Bezeichnung_strebe li au,0.0
+Bezeichnung_strebe li,0.0
+Bezeichnung_strebe hi,0.0
+Bezeichnung_stehblech,0.0
+Bezeichnung_steg vo re,0.0
+Bezeichnung_steg,0.0
+Bezeichnung_steg re,0.0
+Bezeichnung_steg li,0.0
+Bezeichnung_strebe vo,0.0
+Bezeichnung_seitenwand li,0.0
+Bezeichnung_seitenblech,0.0
+Bezeichnung_rückwand re,0.0
+Bezeichnung_rückwand li,0.0
+Bezeichnung_rippe,0.0
+Bezeichnung_profil,0.0
+Bezeichnung_platte re,0.0
+Bezeichnung_strebe re in,0.0
+Bezeichnung_u-blech,0.0
+Bezeichnung_träger,0.0
+Bezeichnung_träger li,0.0
+Material_s700mc,0.0
+Material_s550mc,0.0
+Material_s355mc,0.0
+Material_s235jr,0.0
+Material_hardox 400,0.0
+Bezugsquelle_kaufteil,0.0
+Bezeichnung_zwischenblech,0.0
+Bezeichnung_z profil,0.0
+Bezeichnung_winkelblech mi,0.0
+Bezeichnung_winkelblech,0.0
+Bezeichnung_winkel re,0.0
+Bezeichnung_winkel li,0.0
+Bezeichnung_winkel,0.0
+Bezeichnung_verstärkung vo,0.0
+Bezeichnung_verstärkung hi,0.0
+Bezeichnung_verstärkung,0.0
+Bezeichnung_verschleissblech,0.0
+Bezeichnung_unterteil,0.0
+Bezeichnung_platte,0.0
+Bezeichnung_platte li,0.0
+Bezeichnung_längsträger li ob,0.0
+Bezeichnung_oberteil,0.0
+Bezeichnung_blech,0.0
+Bezeichnung_deckel vo,0.0
+Bezeichnung_deckel re un,0.0
+Bezeichnung_deckel li un,0.0
+Bezeichnung_deckel,0.0
+Bezeichnung_c profil,0.0
+Bezeichnung_buegel,0.0
+Bezeichnung_bodenblech re,0.0
+Bezeichnung_bodenblech li,0.0
+Bezeichnung_bodenblech,0.0
+Bezeichnung_ausgleichsscheibe,0.0
+Bezeichnung_mantel,0.0
+Bezeichnung_auflageplatte,0.0
+Bezeichnung_auflage li,0.0
+Bezeichnung_anschlag,0.0
+Bezeichnung_abweiser,0.0
+Bezeichnung_abdeckung,0.0
+Bereich_d,0.0
+Bereich_c,0.0
+Bereich_b,0.0
 Dichte,0.0
-Bereich_B,0.0
-Bereich_C,0.0
-Bereich_D,0.0
-Bezeichnung_Abdeckung,0.0
-Bezeichnung_Abweiser,0.0
-Bezeichnung_Anschlag,0.0
-Bezeichnung_Auflage li,0.0
-Bezeichnung_Auflageplatte,0.0
-Bezeichnung_Ausgleichsscheibe,0.0
-Bezeichnung_Blech,0.0
-Bezeichnung_Blech ,0.0
-Bezeichnung_Bodenblech,0.0
-Bezeichnung_Bodenblech li,0.0
-Bezeichnung_Bodenblech re,0.0
-Bezeichnung_Buegel,0.0
-Bezeichnung_C Profil,0.0
-Bezeichnung_Deckel,0.0
-Bezeichnung_Deckel li un,0.0
-Bezeichnung_Deckel re un,0.0
-Bezeichnung_Deckel vo,0.0
-Bezeichnung_Einhängelasche,0.0
-Bezeichnung_Einweisblech,0.0
-Bezeichnung_Endblech,0.0
-Bezeichnung_Flanschplatte,0.0
-Bezeichnung_Füllplatte re,0.0
-Bezeichnung_Getriebehalter,0.0
-Bezeichnung_Getriebekonsole,0.0
-Bezeichnung_Knoten,0.0
-Bezeichnung_Knotenblech,0.0
-Bezeichnung_Knotenblech li,0.0
-Bezeichnung_Knotenblech re,0.0
-Bezeichnung_Konsole,0.0
-Bezeichnung_Konsole re,0.0
-Bezeichnung_Lagerblech li,0.0
-Bezeichnung_Lagerblech re,0.0
-Bezeichnung_Lasche,0.0
-Bezeichnung_Lasche hi,0.0
-Bezeichnung_Lasche li,0.0
-Bezeichnung_Lasche re,0.0
-Bezeichnung_Lasche vo,0.0
-Bezeichnung_Lochblech,0.0
-Bezeichnung_Lochplatte,0.0
-Bezeichnung_Längsträger li ob,0.0
-Bezeichnung_Mantel,0.0
-Bezeichnung_Oberteil,0.0
-Bezeichnung_Platte,0.0
-Bezeichnung_Platte li,0.0
-Bezeichnung_Platte re,0.0
-Bezeichnung_Profil,0.0
-Bezeichnung_Rippe,0.0
-Bezeichnung_Rückwand li,0.0
-Bezeichnung_Rückwand re,0.0
-Bezeichnung_Seitenblech,0.0
-Bezeichnung_Seitenwand li,0.0
-Bezeichnung_Steg,0.0
-Bezeichnung_Steg li,0.0
-Bezeichnung_Steg re,0.0
-Bezeichnung_Steg vo li,0.0
-Bezeichnung_Steg vo re,0.0
-Bezeichnung_Stehblech,0.0
-Bezeichnung_Strebe hi,0.0
-Bezeichnung_Strebe li,0.0
-Bezeichnung_Strebe li au,0.0
-Bezeichnung_Strebe li in,0.0
-Bezeichnung_Strebe mi,0.0
-Bezeichnung_Strebe re,0.0
-Bezeichnung_Strebe re au,0.0
-Bezeichnung_Strebe re in,0.0
-Bezeichnung_Strebe vo,0.0
-Bezeichnung_Träger,0.0
-Bezeichnung_Träger li,0.0
-Bezeichnung_U-Blech,0.0
-Bezeichnung_Unterteil,0.0
-Bezeichnung_Verschleissblech,0.0
-Bezeichnung_Verstärkung,0.0
-Bezeichnung_Verstärkung ,0.0
-Bezeichnung_Verstärkung hi,0.0
-Bezeichnung_Verstärkung vo,0.0
-Bezeichnung_Winkel,0.0
-Bezeichnung_Winkel li,0.0
-Bezeichnung_Winkel re,0.0
-Bezeichnung_Winkelblech,0.0
-Bezeichnung_Winkelblech mi,0.0
-Bezeichnung_Z Profil,0.0
-Bezeichnung_Zwischenblech,0.0
-Bezugsquelle_Kaufteil,0.0
-Material_HARDOX400,0.0
-Material_Hardox 400,0.0
-Material_S235JR,0.0
-Material_S355MC,0.0
-Material_S355MC ,0.0
-Material_S550MC,0.0
-Material_S700MC,0.0
-Material_STRENX 700MC,0.0
+Bezeichnung_einhängelasche,0.0
+Bezeichnung_einweisblech,0.0
+Bezeichnung_endblech,0.0
+Bezeichnung_flanschplatte,0.0
+Breite Laserzuschnitt in mm 2,0.0
+Bezeichnung_lochplatte,0.0
+Bezeichnung_lochblech,0.0
+Bezeichnung_lasche vo,0.0
+Bezeichnung_lasche re,0.0
+Bezeichnung_lasche li,0.0
+Bezeichnung_lasche hi,0.0
+Bezeichnung_lasche,0.0
+Bezeichnung_lagerblech re,0.0
+Bezeichnung_lagerblech li,0.0
+Bezeichnung_konsole re,0.0
+Bezeichnung_konsole,0.0
+Bezeichnung_knotenblech re,0.0
+Bezeichnung_knotenblech li,0.0
+Bezeichnung_knotenblech,0.0
+Bezeichnung_knoten,0.0
+Bezeichnung_getriebekonsole,0.0
+Bezeichnung_getriebehalter,0.0
+Bezeichnung_füllplatte re,0.0
+Material_strenx 700mc,0.0

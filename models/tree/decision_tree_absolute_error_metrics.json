@@ -1,10 +1,10 @@
 {
-    "timestamp": "2025-10-13 16:33:40",
-    "model_path": "models/tree\\decision_tree_absolute_error_model.pkl",
+    "timestamp": "2025-11-06 16:54:24",
+    "model_path": "models/tree/decision_tree_absolute_error_model.pkl",
     "metrics": {
-        "MAE": 4.469827586206898,
-        "MSE": 240.8270750000001,
-        "R2": 0.37655960524166354
+        "MAE": 4.454655172413794,
+        "MSE": 240.34722672413804,
+        "R2": 0.377801811079722
     },
     "model_type": "DecisionTree_absolute_error"
 }
